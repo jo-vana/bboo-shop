@@ -1,0 +1,210 @@
+// Header styles
+header.main-header {
+    position: relative;
+    z-index: 500;
+    padding: 25px 0 25px 0;
+    .main-header--container {
+        max-width: 1530px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;        
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 100%;
+            max-width: 300px;
+            padding: 0 20px;
+        }
+    }
+    .header-right {
+        display: flex;
+        flex-wrap: wrap;
+        .shop-bar {
+            a {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+// Navigation menu
+.menu-bar {
+    padding: 10px 10px 10px 45px;
+}
+@media screen and(max-width: 420px) {
+    .menu-bar {
+        padding: 10px 10px 10px 20px;
+    }
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    transition: 0.4s;
+    background-color: #ffffffc7;
+    
+    a {
+        font-family: 'Montserrat', sans-serif;
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+}
+@media screen and(max-width: 1420px) {
+    .overlay {
+        ul {
+            padding-left: 50px;
+        }
+    }
+}
+.overlay-open{ height: 100%; }
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #000;
+}
+
+.open-close-btn {
+position: relative;
+left: 5px;
+text-decoration: none;
+z-index:10;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+}
+/* Hamburger Icon */
+#hamburger-icon{
+    display: inline-block;
+      width: 30px;
+      height: 30px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      cursor: pointer;
+}
+#hamburger-icon span {
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #000;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    margin-top: 6px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+/* Hamburger Lines  */
+
+#hamburger-icon span:nth-child(1) {
+    top: 0px;
+  }
+  
+   #hamburger-icon span:nth-child(2), #hamburger-icon span:nth-child(3) {
+    top: 8px;
+  }
+  
+   #hamburger-icon span:nth-child(4) {
+    top: 17px;
+  }
+  
+  #hamburger-icon.hamburger-open span{
+      background:#000;
+  }
+  
+   #hamburger-icon.hamburger-open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  
+   #hamburger-icon.hamburger-open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+   #hamburger-icon.hamburger-open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+   #hamburger-icon.hamburger-open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+//   Language switcher
+.language {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-top: 9px;
+    padding-left: 15px;
+    a {
+        position: relative;
+        font-size: 15px;
+        font-weight: 400;
+        color: #000;
+        line-height: 1;
+        
+        &::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            z-index: -1;
+            background-color: #fff;
+            border-radius: 50%;
+            top: -4px;
+            left: -4px;
+        }
+    }
+}
+.sr {
+    .language {
+        a.sr {
+            display: none;
+        }
+    }
+}
+.en {
+    .language {
+        a.en {
+            display: none;
+        }
+    }
+}

@@ -9,11 +9,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
-    <main>
-      <h1>Hello BBoo Shop</h1>
+  <body class="sr">
+    <!-- Header -->
+    <header class="main-header">
+      <div class="main-header--container">
+          <div class="menu-bar"> 
+            <a id="hamburger-icon" href="#" class="open-close-btn"><span></span>
+                <span></span>
+                <span></span>
+                <span></span></a>
+                <div id="myNav" class="overlay">
+                  <div class="overlay-content">
+                    <ul>
+                      <li><a href="#section-9">O nama</a></li>
+                      <li><a href="#">Proizvodi</a></li>
+                      <li><a href="#">priče za decu</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+              
+        <div class="logo">
+          <a href="./index.html"><img src="./assets/BabyBoo_logo.svg" alt="BabyBoo-logo" ></a>
+        </div>
+        <div class="header-right">
+          <div class="shop-bar">
+            <a href="#"><img src="./assets/icons/shop_icon.svg" alt="shop"></a>
+            <a href="#"><img src="./assets/icons/shoping_cart.svg" alt="chart"></a>
+          </div>
+          <div class="language">
+            <a href="#" class="en">EN</a>
+            <a href="#" class="sr">SR</a>
+          </div>
+        </div>
+        
+      </div>
+    </header>
+    <!-- END Header -->
     <script src="./js/main.js"></script>
   </body>
 </html>
