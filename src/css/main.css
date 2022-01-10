@@ -23,6 +23,9 @@ header.main-header .header-right {
   display: flex;
   flex-wrap: wrap;
 }
+header.main-header .header-right .shop-bar {
+  position: relative;
+}
 header.main-header .header-right .shop-bar a {
   padding: 0 15px;
 }
@@ -225,6 +228,97 @@ header.main-header .header-right .shop-bar a.chart .notification {
   display: none;
 }
 
+.shopping-cart {
+  background-color: #fafafa;
+  width: 320px;
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  border-radius: 3px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+  -webkit-transform-origin: right top 0;
+  -webkit-transform: scale(0);
+  transform-origin: right top 0;
+  transform: scale(0);
+}
+.shopping-cart.active {
+  opacity: 1;
+  -webkit-transform-origin: right top 0;
+  -webkit-transform: scale(1);
+  transform-origin: right top 0;
+  transform: scale(1);
+}
+.shopping-cart .shopping-cart--header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+.shopping-cart .shopping-cart--header .shopping-cart-total {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.shopping-cart .shopping-cart--header .shopping-cart-total .total {
+  font-weight: 500;
+}
+.shopping-cart .shopping-cart--body .item {
+  position: relative;
+  display: flex;
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 5px 5px;
+}
+.shopping-cart .shopping-cart--body .item .remove {
+  background-color: transparent;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.shopping-cart .shopping-cart--body .item img {
+  max-width: 102px;
+}
+.shopping-cart .shopping-cart--body .item .item-body {
+  font-weight: 300;
+  padding-top: 7px;
+}
+.shopping-cart .shopping-cart--body .item .item-body p {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.shopping-cart .shopping-cart--body .item .item-body span {
+  text-transform: lowercase;
+}
+.shopping-cart .shopping-cart--body .item .item-body span.count {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 8px;
+}
+.shopping-cart .edit-cart {
+  background-color: #000;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 7px 20px;
+  border: none;
+  cursor: pointer;
+}
+
 .products {
   padding: 70px 0;
 }
@@ -238,6 +332,7 @@ header.main-header .header-right .shop-bar a.chart .notification {
 .products .item img {
   max-width: 200px;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 .products h2, .products h3, .products p {
   text-transform: uppercase;

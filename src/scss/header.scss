@@ -23,6 +23,7 @@ header.main-header {
         display: flex;
         flex-wrap: wrap;
         .shop-bar {
+            position: relative;
             a {
                 padding: 0 15px;
                 &.chart {

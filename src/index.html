@@ -37,7 +37,45 @@
         <div class="header-right">
           <div class="shop-bar">
             <a href="#" class="shop"><img src="./assets/icons/shop_icon.svg" alt="shop"></a>
-            <a href="#" class="chart"><img src="./assets/icons/shoping_cart.svg" alt="chart"><span class="notification">3</span></a>
+            <a href="#" id="cart" class="chart"><img src="./assets/icons/shoping_cart.svg" alt="chart"><span class="notification">3</span></a>
+            <!-- PopUp Cart -->
+            <div class="shopping-cart">
+              <div class="shopping-cart--header">
+                <button class="edit-cart">Izmeni</button>
+                <div class="shopping-cart-total">
+                  <span>Ukupno</span>
+                  <span class="total">3.999,00 RSD</span>
+                </div>
+              </div>
+              <div class="shopping-cart--body">
+                <!-- Item -->
+                <div class="item">
+                  <button class="remove"><img src="./assets/icons/close.svg"></button>
+                  <div><img src="./assets/products/MACADAMIA-Shampoo.png" alt="shampoo"></div>
+                  <div class="item-body">
+                    <p>Macadamia</p>
+                    <span>Šampon i regenerator 200ml</span>
+                    <p>1.190.00 RSD</p>
+                    <p>KOLIČINA <span class="count">1</span></p>
+                  </div>
+                </div>
+                <!-- Item -->
+                <div class="item">
+                  <button class="remove"><img src="./assets/icons/close.svg"></button>
+                  <div><img src="./assets/products/SHEA_BUTTER-Lotion.png" alt="shampoo"></div>
+                  <div class="item-body">
+                    <p>SHEABUTTER</p>
+                    <span>losion za telo 200ml</span>
+                    <p>2.809.00 RSD</p>
+                    <p>KOLIČINA <span class="count">2</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="shopping-cart--footer">
+                <button class="edit-cart">Realizuj kupovinu</button>
+              </div>
+            </div>
+            <!-- END PopUp Cart -->
           </div>
           <div class="language">
             <a href="#" class="en">EN</a>
