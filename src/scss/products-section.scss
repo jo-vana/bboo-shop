@@ -1,6 +1,13 @@
 // Products section
 .products {
-    padding: 70px 0;
+    position: relative;
+    padding: 70px 0 170px 0;
+    margin-bottom: 50px;
+    background-image: url('../assets/bg/leaf3.png');
+    background-size: auto;
+    background-position-x: 70%;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
     .item {
         display: flex;
         flex-direction: column;
@@ -24,6 +31,35 @@
     }
     h3 {
         font-size: 14px;
+    }
+    &::before {
+        content: url('../assets/bg/leaf1.png');
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -10%;
+        z-index: 100;
+        @media screen and(max-width: 1390px) {
+            left: -5%;
+        }
+        @media screen and(max-width: 1390px) {
+            display: none;
+        }
+    }
+    &::after {
+        content: url('../assets/bg/leaf2.png');
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -10%;
+        z-index: 100;
+        @media screen and(max-width: 1390px) {
+            right: 0;
+        }
+        @media screen and(max-width: 1390px) {
+           display: none;
+        }
     }
 }
 

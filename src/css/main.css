@@ -320,7 +320,14 @@ header.main-header .header-right .shop-bar a.chart .notification {
 }
 
 .products {
-  padding: 70px 0;
+  position: relative;
+  padding: 70px 0 170px 0;
+  margin-bottom: 50px;
+  background-image: url("../assets/bg/leaf3.png");
+  background-size: auto;
+  background-position-x: 70%;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
 }
 .products .item {
   display: flex;
@@ -343,6 +350,43 @@ header.main-header .header-right .shop-bar a.chart .notification {
 }
 .products h3 {
   font-size: 14px;
+}
+.products::before {
+  content: url("../assets/bg/leaf1.png");
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  z-index: 100;
+}
+@media screen and (max-width: 1390px) {
+  .products::before {
+    left: -5%;
+  }
+}
+@media screen and (max-width: 1390px) {
+  .products::before {
+    display: none;
+  }
+}
+.products::after {
+  content: url("../assets/bg/leaf2.png");
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10%;
+  z-index: 100;
+}
+@media screen and (max-width: 1390px) {
+  .products::after {
+    right: 0;
+  }
+}
+@media screen and (max-width: 1390px) {
+  .products::after {
+    display: none;
+  }
 }
 
 .button-padding {
