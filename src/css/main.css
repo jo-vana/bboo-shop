@@ -47,6 +47,26 @@ header.main-header .header-right .shop-bar a.chart .notification {
   text-align: center;
   line-height: 1.4;
 }
+@media screen and (max-width: 590px) {
+  header.main-header .header-right .shop-bar a.chart .notification {
+    top: 16px;
+    right: 0px;
+  }
+}
+@media screen and (max-width: 590px) {
+  header.main-header .header-right .shop-bar {
+    display: flex;
+    flex-direction: column;
+  }
+  header.main-header .header-right .shop-bar a {
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 590px) {
+  header.main-header .header-right {
+    flex-direction: column;
+  }
+}
 
 .menu-bar {
   padding: 10px 10px 10px 45px;
@@ -218,6 +238,12 @@ header.main-header .header-right .shop-bar a.chart .notification {
   border-radius: 50%;
   top: -4px;
   left: -4px;
+}
+@media screen and (max-width: 590px) {
+  .language {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .sr .language a.sr {
