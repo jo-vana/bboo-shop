@@ -420,19 +420,57 @@ header.main-header .header-right .shop-bar a.chart .notification {
 }
 
 .product {
+  position: relative;
   color: #000;
   padding: 100px 0;
+  z-index: 1;
 }
-.product.right {
+.product .right {
   padding: 20px 0 0 30px;
 }
 .product p {
   font-size: 18px;
 }
+.product .left img {
+  width: 100%;
+}
 .product .stamps {
+  position: relative;
   display: block;
   padding: 70px 0 50px 0;
   margin: 0 auto;
+  text-align: center;
+}
+.product .stamps img {
+  width: auto;
+}
+.product .stamps::before {
+  content: url(../assets/product-bg/bgd3-svg.png);
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+.product .stamps::after {
+  content: url(../assets/product-bg/bgd2-svg.png);
+  position: absolute;
+  top: 15%;
+  right: 10%;
+}
+@media screen and (max-width: 768px) {
+  .product .stamps::before {
+    left: 0;
+  }
+  .product .stamps::after {
+    right: 0;
+  }
+}
+@media screen and (max-width: 568px) {
+  .product .stamps::before {
+    content: "";
+  }
+  .product .stamps::after {
+    content: "";
+  }
 }
 .product .bottom {
   padding-top: 40px;
@@ -467,9 +505,39 @@ header.main-header .header-right .shop-bar a.chart .notification {
   padding-right: 20px;
 }
 .product .bottom .left {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+.product .bottom .left img {
+  width: auto;
+}
+.product .bottom .left::after {
+  content: url(../assets/product-bg/bgd4-svg.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 568px) {
+  .product .bottom .left::after {
+    content: "";
+  }
+}
+.product .bottom .right img {
+  width: 100%;
+}
+.product::after {
+  content: url(../assets/product-bg/bgd1-svg.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+@media screen and (max-width: 768px) {
+  .product::after {
+    display: none;
+  }
 }
 
 .product-heading {
@@ -553,6 +621,11 @@ input[type=number]::-webkit-outer-spin-button {
   bottom: 0;
   left: 0;
 }
+@media screen and (max-width: 768px) {
+  .product-benefits {
+    padding-bottom: 5px;
+  }
+}
 
 ul.tag-list {
   display: flex;
@@ -584,6 +657,11 @@ ul.tag-list--dark li {
   cursor: vertical-text;
   background-color: #000;
   color: #fff;
+}
+@media screen and (max-width: 568px) {
+  ul.tag-list {
+    padding-top: 20px;
+  }
 }
 
 footer {
@@ -636,6 +714,9 @@ body {
 }
 
 a {
+  text-decoration: none;
+}
+a:hover {
   text-decoration: none;
 }
 
