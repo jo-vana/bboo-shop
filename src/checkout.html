@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBoo Shop</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="sr">
+    <!-- Header -->
+    <header class="main-header">
+      <div class="main-header--container">
+          <div class="menu-bar"> 
+            <a id="hamburger-icon" href="#" class="open-close-btn"><span></span>
+                <span></span>
+                <span></span>
+                <span></span></a>
+                <div id="myNav" class="overlay">
+                  <div class="overlay-content">
+                    <ul>
+                      <li><a href="#section-9">O nama</a></li>
+                      <li><a href="#">Proizvodi</a></li>
+                      <li><a href="#">priče za decu</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+              
+        <div class="logo">
+          <a href="./index.html"><img src="./assets/BabyBoo_logo.svg" alt="BabyBoo-logo" ></a>
+        </div>
+        <div class="header-right">
+          <div class="shop-bar">
+            <a href="#" class="shop"><img src="./assets/icons/shop_icon.svg" alt="shop"></a>
+            <a href="#" id="cart" class="chart"><img src="./assets/icons/shoping_cart.svg" alt="chart"><span class="notification">3</span></a>
+            <!-- PopUp Cart -->
+            <div class="shopping-cart">
+              <div class="shopping-cart--header">
+                <button class="edit-cart">Izmeni</button>
+                <div class="shopping-cart-total">
+                  <span>Ukupno</span>
+                  <span class="total">3.999,00 RSD</span>
+                </div>
+              </div>
+              <div class="shopping-cart--body">
+                <!-- Item -->
+                <div class="item">
+                  <button class="remove"><img src="./assets/icons/close.svg"></button>
+                  <div><img src="./assets/products/MACADAMIA-Shampoo.png" alt="shampoo"></div>
+                  <div class="item-body">
+                    <p>Macadamia</p>
+                    <span>Šampon i regenerator 200ml</span>
+                    <p>1.190.00 RSD</p>
+                    <p>KOLIČINA <span class="count">1</span></p>
+                  </div>
+                </div>
+                <!-- Item -->
+                <div class="item">
+                  <button class="remove"><img src="./assets/icons/close.svg"></button>
+                  <div><img src="./assets/products/SHEA_BUTTER-Lotion.png" alt="shampoo"></div>
+                  <div class="item-body">
+                    <p>SHEABUTTER</p>
+                    <span>losion za telo 200ml</span>
+                    <p>2.809.00 RSD</p>
+                    <p>KOLIČINA <span class="count">2</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="shopping-cart--footer">
+                <button class="edit-cart">Realizuj kupovinu</button>
+              </div>
+            </div>
+            <!-- END PopUp Cart -->
+          </div>
+          <div class="language">
+            <a href="#" class="en">EN</a>
+            <a href="#" class="sr">SR</a>
+          </div>
+        </div>
+        
+      </div>
+    </header>
+    <!-- END Header -->
+    <section>
+      <div class="container checkout">
+        <div class="row">
+          <div class="col-md-7 left">
+            <div class="wrapper form">
+              <h2>Isporuka</h2>
+              <!-- Delivery Form -->
+              <form>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ime i prezime">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefon">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Adresa">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Grad">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-12">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email adresa">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="wrapper radio">
+              <p>Način plaćanja</p>
+              <div class="radio-btn">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="puzece" value="1">
+                  <label class="form-check-label" for="inlineRadio1">POUZEĆEM</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="platna" value="2">
+                  <label class="form-check-label" for="inlineRadio2">PLATNOM KARTICOM</label>
+                </div>
+              </div>
+            </div>
+            <p>Pozicija teksta koji će opisno pobrojati neophodne napomene vezane 
+            za način plaćanja, isporuku, i drugo.
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+            labore et dolore magnam aliquam quaerat voluptatem.</p>
+          </div>
+          <div class="col-md-5 right">
+            <div class="wrapper">
+              <div class="info-cart">
+                <div class="info-cart--header">
+                  <div class="info-cart--total row">
+                    <span class="col-sm-8">Ukupno artikala</span>
+                    <span class="total col-sm-4">3</span>
+                  </div>
+                  <div class="info-cart--total row">
+                    <span class="col-sm-8">UKUPNO ZA PLAĆANJE</span>
+                    <span class="total col-sm-4">3.999,00 RSD</span>
+                  </div>
+                </div>
+                <div class="info-cart--body">
+                  <!-- Item -->
+                  <div class="item">
+                    <button class="remove"><img src="./assets/icons/close.svg"></button>
+                    <div><img src="./assets/products/MACADAMIA-Shampoo.png" alt="shampoo"></div>
+                    <div class="item-body">
+                      <p>Macadamia</p>
+                      <span>Šampon i regenerator 200ml</span>
+                      <p>1.190.00 RSD</p>
+                      <p>KOLIČINA <span class="count">1</span></p>
+                    </div>
+                  </div>
+                  <!-- Item -->
+                  <div class="item">
+                    <button class="remove"><img src="./assets/icons/close.svg"></button>
+                    <div><img src="./assets/products/SHEA_BUTTER-Lotion.png" alt="shampoo"></div>
+                    <div class="item-body">
+                      <p>SHEABUTTER</p>
+                      <span>losion za telo 200ml</span>
+                      <p>2.809.00 RSD</p>
+                      <p>KOLIČINA <span class="count">2</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-cart--footer">
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="radio" id="consent" value="true" aria-label="...">
+                    <label class="form-check-label" for="consent">Saglasan sam sa uslovima kupovine</label>
+                  </div>
+                  <button class="go-btn">Realizuj kupovinu</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer section -->
+    <footer>
+      <div class="container-fluid">
+        <a id="button"><img src="./assets/arrow-down.svg" alt="go-to-top"></a>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <ul class="social-list">
+              <li><a href="#"><img src="./assets/social-icons/footer_0000_IG_icon.svg" alt=""></a></li>
+              <li><a href="#"><img src="./assets/social-icons/footer_0001_FB_icon.svg" alt=""></a></li>
+              <li><a href="#"><img src="./assets/social-icons/YT.svg" alt="" class="yt-icon"></a></li>
+            </ul>
+            <p><span>We Boo Natural doo</span><br>
+              Strahinića Bana 68, 11000 Beograd</p>
+              <a href="tel:+381-11-328-867">+381 11 328 867</a>
+              <a href="mailto:office@baby-boo.net">office@baby-boo.net</a>
+              <p class="copyright">Copyright © 2021 BABY BOO. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script language="JavaScript" type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>

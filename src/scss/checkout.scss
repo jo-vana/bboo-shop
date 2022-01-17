@@ -1,0 +1,251 @@
+// Styles for Chart page
+.checkout {
+    position: relative;
+    min-height: calc(100vh - 350px);
+    padding: 30px 0 150px 0;
+    .left, .right {
+        .wrapper {
+            position: relative;
+            background-color: #fafafa;
+            padding: 30px 25px 25px 25px;
+            z-index: 1;
+        }
+    }
+    .left {
+        position: relative;
+        z-index: 1;
+        h2 {
+            text-transform: uppercase;
+            font-size: 31px;
+            font-weight: 400;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            padding-top: 20px;
+        }
+        .form {
+            form {
+                padding: 15px 0;
+                input:focus {
+                    box-shadow: none;
+                }
+            }
+            &-group {
+                padding-left: 0;
+            }
+            &-control {
+                border: none;
+            }
+        }
+        .radio {
+            margin-top: 10px;
+            p {
+                font-size: 18px;
+                font-weight: 300;
+            }
+            .radio-btn {
+                .form-check {
+                    position: relative;
+                }
+                input {
+                    cursor: pointer;
+                }
+                input[type=radio]:checked + label:after {
+                    border-radius: 11px;
+                    width: 13px;
+                    height: 13px;
+                    position: absolute;
+                    top: 5px;
+                    left: 0px;
+                    content: " ";
+                    display: block;
+                    background: #000;
+                }
+            }
+        }
+        &::before {
+            content: url('../assets/checkout/bgd2-svg.png');
+            position: absolute;
+            bottom: -120px;
+            left: -30px;
+            z-index: -1;
+        }
+    }
+    .right {
+        .wrapper {
+            position: relative;
+            z-index: 10;
+            &::before {
+                content: url('../assets/checkout/bgd3-svg.png');
+                position: absolute;
+                bottom: -95px;
+                right: 0;
+                z-index: -1;
+            }
+        }
+    }
+    .right {
+        .wrapper {
+            padding-top: 20px;
+        }
+        .info-cart {
+            &--total {
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 300;
+                .total {
+                    font-weight: 500;
+                }
+            }
+            &--body {
+                position: relative;
+                display: block;
+                max-height: 250px;
+                overflow-y: scroll;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    background-color: #fff;
+                    margin: 10px 0;
+                    .remove {
+                        background-color: transparent;
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        border: none;
+                        padding: 0;
+                        cursor: pointer;
+                    }
+                    img {
+                        max-width: 153px;
+                    }
+                    &-body {
+                        font-weight: 300;
+                        padding-top: 7px;
+                        p {
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            margin-bottom: 3px;
+                        }
+                        span {
+                            text-transform: lowercase;
+                        }
+                        span.count {
+                            display: inline-block;
+                            width: 25px;
+                            height: 25px;
+                            border: 1px solid #000;
+                            border-radius: 50%;
+                            text-align: center;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+            &--footer {
+                padding: 10px 0 50px 0;
+                position: relative;
+                .form-check {
+                    position: relative;
+                    padding: 15px 20px;
+                }
+                input {
+                    cursor: pointer;
+                }
+                input[type=radio]:checked + label:after {
+                    border-radius: 11px;
+                    width: 13px;
+                    height: 13px;
+                    position: absolute;
+                    top: 5px;
+                    left: 0px;
+                    content: " ";
+                    display: block;
+                    background: #000;
+                }
+                .go-btn {
+                    background-color: #000;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 16px;
+                    border-radius: 20px;
+                    padding: 7px 20px;
+                    border: none;
+                    cursor: pointer;
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: -35px;
+                    left: 0;
+                    width: 100%;
+                    height: 50px;
+                    background: rgb(255,255,255);
+                    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(250,250,250,0.7343312324929971) 33%, rgba(250,250,250,1) 100%);
+                }
+            }
+        }
+    }
+    &::after {
+        content: url('../assets/logo.png');
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        z-index: 0;
+        @media screen and(max-width: 420px) {
+            content: '';
+        }
+    }
+    @media screen and(max-width: 982px) {
+        min-height: auto;
+    }
+}
+
+// Form-inputs/placeholder text to uppercase
+::-webkit-input-placeholder { /* WebKit browsers */
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder { /* Recent browsers */
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #dfdfdf; 
+    padding-left: 10px;
+
+}
