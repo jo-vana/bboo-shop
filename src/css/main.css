@@ -664,6 +664,126 @@ ul.tag-list--dark li {
   }
 }
 
+.chart-page {
+  position: relative;
+  min-height: calc(100vh - 350px);
+  padding: 30px 0 100px 0;
+}
+.chart-page .left .wrapper, .chart-page .right .wrapper {
+  position: relative;
+  background-color: #fafafa;
+  padding: 0 25px 25px 25px;
+  z-index: 1;
+}
+.chart-page .left .info {
+  padding: 15px 0;
+}
+.chart-page .left .info p {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 16px;
+  padding: 0 10px;
+  margin-bottom: 0;
+}
+.chart-page .left .info-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.chart-page .left .info-wrapper p {
+  font-size: 31px;
+}
+.chart-page .left .info-wrapper p.price {
+  font-weight: 500;
+}
+.chart-page .item {
+  position: relative;
+  padding: 20px 0;
+}
+.chart-page .item .btn-remove {
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.chart-page .item-left img {
+  max-width: 233px;
+  width: 100%;
+}
+.chart-page .item-right .product-heading h2 {
+  margin-bottom: 10px;
+  padding-top: 15px;
+}
+.chart-page .item-right .count {
+  padding-bottom: 1px;
+}
+.chart-page .item:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+.chart-page .right .wrapper {
+  padding-top: 20px;
+}
+.chart-page .right .wrapper .logo {
+  text-align: center;
+  padding: 10px 0 36px 0;
+}
+.chart-page .right .info {
+  border-bottom: 1px solid #000;
+  padding: 2px 10px;
+}
+.chart-page .right .info p {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.chart-page .right .info p span {
+  font-weight: 500;
+}
+.chart-page .right .info-final {
+  padding: 15px 0;
+}
+.chart-page .right .info-final p {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.chart-page .right .info-final p span {
+  font-weight: 400;
+  font-size: 36px;
+  padding-left: 20px;
+  white-space: nowrap;
+}
+.chart-page .right .info-final .center {
+  padding: 50px 0;
+}
+.chart-page::after {
+  content: url("../assets/chart/bgd2-svg.png");
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  z-index: 0;
+}
+@media screen and (max-width: 420px) {
+  .chart-page::after {
+    content: "";
+  }
+}
+.chart-page::before {
+  content: url("../assets/chart/bg_leaf.png");
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (max-width: 982px) {
+  .chart-page {
+    min-height: auto;
+  }
+}
+
 footer {
   background-color: #000;
   padding: 25px 0 10px 0;
@@ -767,6 +887,15 @@ button.add-to-cart {
 #button.show {
   opacity: 1;
   visibility: visible;
+}
+
+.container {
+  max-width: 1270px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */

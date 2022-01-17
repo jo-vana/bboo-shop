@@ -2,6 +2,7 @@
 @import "./cart-pop-up.scss";
 @import "./products-section.scss";
 @import "./product.scss";
+@import "./chart.scss";
 @import "./footer.scss";
 
 body {
@@ -56,4 +57,11 @@ button.add-to-cart {
       opacity: 1;
       visibility: visible;
     }
-  }
+}
+.container {
+    max-width: 1270px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
