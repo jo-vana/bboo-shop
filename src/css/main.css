@@ -262,7 +262,8 @@ header.main-header .header-right .shop-bar a.chart .notification {
   right: -10px;
   border-radius: 3px;
   padding: 20px;
-  overflow: hidden;
+  overflow: scroll;
+  max-height: 400px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
